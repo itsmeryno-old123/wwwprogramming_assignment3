@@ -1,0 +1,18 @@
+<center>
+	<h1>Dealerships</h1>
+	<table>
+		<tr class="header">
+			<th>Name</th>
+			<th>City</th>
+			<th/>
+		</tr>
+		
+		<% @dealerships.each do |d|%>
+			<tr>
+				<td><%= d.name%></td>
+				<td><%= d.city%></td>
+				<td><a href="/dealers/view/<%= d.id %>">View</a></td>
+			</tr>
+		<%end%>
+	</table>
+</center>

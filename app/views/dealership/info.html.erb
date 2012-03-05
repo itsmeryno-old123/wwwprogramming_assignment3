@@ -1,0 +1,28 @@
+<center>
+	<h1><%= @selected.name%></h1>
+	<table class="nonmain">
+		<tr>
+			<th colspan="2">Dealership Information</th>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td><%= @selected.address_line1%> <br/>
+				<%= @selected.address_line2%> <br/>
+				<%= @selected.city%> <br/>
+				<%= @selected.postal_code%>
+			</td>
+		</tr>
+		<tr>
+			<td>Contact Number</td>
+			<td><%= @selected.contact_nr1%></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<a href="/cars/list/<%= @selected.id %>">View cars from this dealer</a>
+			</td>
+		</tr>
+	</table>
+	<br/>
+	<a href="/">Back to list</a>
+	<br/>
+</center>
