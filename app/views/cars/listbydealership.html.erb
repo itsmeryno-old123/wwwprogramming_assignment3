@@ -1,2 +1,29 @@
-<h1>Cars#listbydealership</h1>
-<p>Find me in app/views/cars/listbydealership.html.erb</p>
+<center>
+	<h1>Cars from <% @dealer.name %></h1>
+	<table>
+		<tr class="header">
+			<th>Make</th>
+			<th>Model</th>
+			<th>Year</th>
+			<th>Kms</th>
+			<th>Service history?</th>
+			<th>Price</th>
+		</tr>
+		
+		<% @list.each do |car|%>
+			<tr>
+				<td><%= car.make %></td>
+				<td><%= car.model %></td>
+				<td><%= car.year %></td>
+				<td><%= car.kms %></td>
+				<td><%= car.fsh %></td>
+				<td><%= car.price %></td>
+			</tr>
+		<%end%>
+	</table>
+	
+	<br/>
+	<a href="/dealers/view/<%= @dealer.id%>">Back to dealership</a>
+	
+</center>
+
